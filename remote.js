@@ -23,8 +23,8 @@ module.exports = class Remote {
 
             let args = Formatter.convertJsonToSoapRequest(payload);
             let remoteResponse = await ApiClient.post(url, args, headers);
-            remoteResponse = await Parser.convertXMLTiJSON(remoteResponse);
-
+            console.log(remoteResponse.data)
+            remoteResponse = Parser.convertXMLToJSON(remoteResponse.data);
             console.log(remoteResponse);
         } catch (err) {
             throw new Error(

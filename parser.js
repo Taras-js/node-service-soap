@@ -10,7 +10,7 @@ module.exports = class Parser {
         return jsonxml(jsonArgument, {html: true});
     }
 
-    static convertXMLTiJSON(xmlMessage) {
+    static convertXMLToJSON(xmlMessage) {
         const options = {trim: true, explicitArray: false, explicitRoot: false};
         return promisifiedParseString(xmlMessage, options);
     }

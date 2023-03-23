@@ -11,7 +11,7 @@ module.exports = class Parser {
     }
 
     static convertXMLToJSON(xmlMessage) {
-        const options = {trim: true, explicitArray: false, explicitRoot: false};
+        const options = {trim: true, explicitArray: false, explicitRoot: false, ignoreAttrs: true};
         return promisifiedParseString(xmlMessage, options);
     }
 };

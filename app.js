@@ -10,7 +10,7 @@ app.use(express.json());
         app.listen(PORT, async () => {
             try {
                 console.log(`App is started on port ${PORT}...`)
-                await Remote.multipleTwoOperands(5, 9);
+                await Remote.multipleTwoOperands(5, 5);
             } catch (error) {
                 console.log(`error:`, error);
             }
